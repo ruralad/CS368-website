@@ -1,0 +1,84 @@
+$primary-color: #37915c;
+$secondary-color: #222222;
+$background-color: papayawhip;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+  text-align: left;
+
+  background-color: $background-color;
+  width: auto;
+  height: 100vh;
+
+  font-family: "Roboto Slab", serif;
+  font-size: 15px;
+  color: $primary-color;
+
+  .content {
+    h1 {
+      font-weight: 400;
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $secondary-color;
+      opacity: 0.7;
+    }
+    .buttons {
+      position: relative;
+      padding-top: 2em;
+      button {
+        margin-right: 1em;
+        width: 8em;
+        height: 3em;
+        border: none;
+        border-radius: 0.2em;
+        background: $primary-color;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        color: $background-color;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $background-color;
+          color: $primary-color;
+          border: 2px solid $secondary-color;
+        }
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+  .animation {
+    width: 30em;
+    height: 30em;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    width: 100vw;
+    height: 70vh;
+
+    .content {
+      text-align: center;
+    }
+    .animation {
+      width: 20em;
+      height: 20em;
+    }
+  }
+}
