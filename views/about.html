@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About This Site</title>
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
 
     <!-- change base(for dev only) -->
     <!-- <base href="/public/" /> -->
@@ -30,10 +35,13 @@
           NodeJs is a javascript runtime, which allows to write server side code
           with javascript, and Express is a minimalistic javascript framework
           for Node. <br />
-          Database used is MongoDB which is a NoSql database, and is integrated into express using mongoose package. <br>
+          Database used is MongoDB which is a NoSql database, and is integrated
+          into express using mongoose package. The page views you see on the home page is updated on each visit using a collection on this database.<br />
           <a href="https://nodejs.org/en/" target="_blank">NodeJs</a>
           <a href="http://expressjs.com/" target="_blank">Express</a>
-          <a href="https://www.mongodb.com/what-is-mongodb" target="_blank">MongoDB</a>
+          <a href="https://www.mongodb.com/what-is-mongodb" target="_blank"
+            >MongoDB</a
+          >
         </p>
       </div>
 
@@ -42,10 +50,14 @@
         <p>
           The site is hosted on Heroku, which is a cloud platform where apps can
           be launched very easily and also offers many addons for managing these
-          apps <br />
-          Also, the domain is registered on freenom.org <br />
+          apps. <br />
+          The domain is registered on freenom.org <br />
+          Also, the app is SSL/TLS encrypted using Cloudfare, along with other
+          useful features from the Cloudfare platform like their own DNS
+          servers, faster speeds and caching system. <br />
           <a href="https://www.heroku.com/about" target="_blank">Heroku</a>
           <a href="https://www.freenom.com" target="_blank">Freenom</a>
+          <a href="https://www.cloudfare.com" target="_blank">Cloudfare</a>
         </p>
       </div>
 
@@ -67,16 +79,20 @@
       <div class="box">
         <h3>How everything connects</h3>
         <p>
-          The devolopment is done on a local node server running on my PC, and the changes are pushed into github. The app hosted on Heroku looks for any changes in the github, and upon encountering any change, it does a new build sequence, which updates the app. <br>
+          The devolopment is done on a local node server running on my PC, and
+          the changes are pushed into github. The app hosted on Heroku looks for
+          any changes in the github, and upon encountering any change, it does a
+          new build sequence, which updates the app. <br />
           (Here, app = website)
         </p>
       </div>
     </div>
 
     <footer>
-        <a href="/">Home</a>
-        <a href="https://github.com/ruralad/CS368-website" target="_blank">Code</a>
+      <a href="/">Home</a>
+      <a href="https://github.com/ruralad/CS368-website" target="_blank"
+        >Code</a
+      >
     </footer>
-
   </body>
 </html>
