@@ -6,8 +6,9 @@ const pageBody :HTMLElement = document.querySelector(".content") as HTMLElement;
 const pageAnimation :HTMLElement = document.querySelector(".animation") as HTMLElement;
 const loadingAnimation :HTMLElement = document.querySelector(".item") as HTMLElement;
 function showBody() {
-  fetch("http://localhost:3000/api/getCurrentViews", {
-    method: "get",
+  // fetch("http://localhost:3000/api/getCurrentViews", { //for dev
+    fetch("/api/getCurrentViews", {
+      method: "get",
     mode: "cors",
   })
     .then((response) => response.json())
@@ -18,8 +19,9 @@ function showBody() {
       pageAnimation.style.display = "block";
       loadingAnimation.style.display = "none";
 
-      fetch("http://localhost:3000/api/updatePageView", {
-        method: "post",
+      // fetch("http://localhost:3000/api/updatePageView", { //for dev
+        fetch("/api/updatePageView", {
+          method: "post",
         mode: "cors",
       });
     });
