@@ -12,37 +12,38 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
     <!-- css -->
     <link rel="stylesheet" href="css/home.css" />
+
+    <!-- lottie-player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" async></script>
   </head>
-  <body>
+  <body onload="showBody()">
     <div class="content">
       <h3>Hi, I'm Abhinav</h3>
       <h1>Welcome to my CS368 Website</h1>
       <div class="buttons">
-        <a href="https://github.com/ruralad/CS368-website"
-         target="_blank" ><button>Tech Stack</button></a
-        >
-        <a href="#">
+        <a href="/about"><button>Tech Stack</button></a>
+        <a href="https://github.com/ruralad/CS368-website" target="_blank">
           <button>Code</button>
         </a>
       </div>
     </div>
 
-        <lottie-player
-        src="https://assets3.lottiefiles.com/packages/lf20_7smeegra.json"
-        background="transparent"
-        class="animation"
-        speed="1"
-        loop
-        autoplay
-      ></lottie-player>
-    
+    <lottie-player
+      src="https://assets3.lottiefiles.com/packages/lf20_7smeegra.json"
+      background="transparent"
+      class="animation"
+      speed="1"
+      loop
+      autoplay
+    ></lottie-player>
+
     <!-- scripts -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>

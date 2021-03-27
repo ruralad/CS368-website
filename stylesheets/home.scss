@@ -1,14 +1,24 @@
-$primary-color: #37915c;
+$primary-color: #3154be;
 $secondary-color: #222222;
-$background-color: papayawhip;
+$background-color: #fff;
+$selective-color: #1eb38b;
 
+@keyframes show-slowly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
-  display: flex;
-  justify-content: space-around;
+  display: none;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
 
@@ -17,15 +27,16 @@ body {
   background-color: $background-color;
   width: auto;
   height: 100vh;
+  animation: show-slowly 2s ease;
 
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   color: $primary-color;
-
   .content {
+    height: 20%;
     h1 {
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 3rem;
     }
     h3 {
       font-size: 1.5rem;
@@ -58,23 +69,28 @@ body {
     }
   }
   .animation {
-    width: 30em;
-    height: 30em;
+    width: 35em;
+    margin-top: -10%;
   }
 }
 
 @media (max-width: 600px) {
   body {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column-reverse;
 
     width: 100vw;
     height: 70vh;
-
     .content {
       text-align: center;
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.1.7rem;
+      }
     }
     .animation {
       width: 20em;
