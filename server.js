@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const dbURI =
-  "mongodb+srv://dbUser:cs368pword@cluster0.d3ocq.mongodb.net/CS368?retryWrites=true&w=majority";
+  "mongodb+srv://dbUser:"+ process.env.DB_PASSWORD +"@cluster0.d3ocq.mongodb.net/CS368?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
