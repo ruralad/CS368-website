@@ -5,7 +5,9 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const dbURI =
-  "mongodb+srv://dbUser:"+ process.env.DB_PASSWORD +"@cluster0.d3ocq.mongodb.net/CS368?retryWrites=true&w=majority";
+  "mongodb+srv://dbUser:cs368-pass" +
+  // process.env.DB_PASSWORD +
+  "@cluster0.d3ocq.mongodb.net/CS368?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
@@ -26,6 +28,12 @@ app.get("/", (req, res) => {
 });
 app.get("/about", (req, res) => {
   res.sendFile(__dirname + "/views/about.html");
+});
+app.get("/tutorial", (req, res) => {
+  res.redirect("/tutorial/1");
+});
+app.get("/tutorial/1", (req, res) => {
+  res.sendFile(__dirname + "/views/tutorials/1/1.html");
 });
 
 // api
